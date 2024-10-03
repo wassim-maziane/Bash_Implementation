@@ -1,0 +1,9 @@
+pipeline1.1 = a
+pipeline2.1 = b | c
+pipeline2.2 = d
+pipeline3.1 = e | f
+
+conditional3 = e | f &
+conditional2 = b | c && d & e | f &
+condition1 = a & b | c && d ; e | f &
+

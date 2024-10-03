@@ -10,7 +10,7 @@
 #define exit __DO_NOT_CALL_EXIT__READ_PROBLEM_SET_DESCRIPTION__
 
 // struct command
-//    Data structure describing a command. Add your own stuff.
+//    Data structure describing a command, we'll handle pipeline logic in run()
 
 struct command {
   std::vector<std::string> args;
@@ -24,7 +24,9 @@ struct command {
   void run();
 };
 
-// I defined this
+// struct pipeline
+//    Data structure describing a pipeline, we'll handle conditional logic in
+//    run()
 struct pipeline {
   command *command_child = nullptr;
   pipeline *next_in_conditional = nullptr;
@@ -33,7 +35,9 @@ struct pipeline {
   void run();
 };
 
-// I defined this
+// struct conditional
+//  Data structure describing a conditional, we'll handle background/foreground
+//  logic in run()
 struct conditional {
   pipeline *pipeline_child = nullptr;
   conditional *next_in_list = nullptr;

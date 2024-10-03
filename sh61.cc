@@ -286,7 +286,7 @@ int main(int argc, char *argv[]) {
   while (!feof(command_file)) {
     // Print the prompt at the beginning of the line
     if (needprompt && !quiet) {
-      printf("sh61[%d]$ ", getpid());
+      printf("wassim[%d]$ ", getpid());
       fflush(stdout);
       needprompt = false;
     }
@@ -299,7 +299,7 @@ int main(int argc, char *argv[]) {
         buf[bufpos] = 0;
       } else {
         if (ferror(command_file)) {
-          perror("sh61");
+          perror("wassim");
         }
         break;
       }
